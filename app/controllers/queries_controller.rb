@@ -22,17 +22,17 @@ class QueriesController < ApplicationController
     end
   end
 
-  def bing_create
-    text_to_translate = params[:query][:english]
-    to_text = Language.find(params[:language_id])
-    @query = language.queries.new(query_params)
-    @query.other = API.call_api(text_to_translate, to_text)
-    if @query.save
-      redirect_to language_path(@language)
-    else
-      render 'languages/show'
-    end
-  end
+  # def bing_create
+  #   text_to_translate = params[:query][:english]
+  #   to_text = Language.find(params[:language_id])
+  #   @query = language.queries.new(query_params)
+  #   @query.other = API.call_api(text_to_translate, to_text)
+  #   if @query.save
+  #     redirect_to language_path(@language)
+  #   else
+  #     render 'languages/show'
+  #   end
+  # end
 
   private
 
