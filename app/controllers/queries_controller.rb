@@ -12,6 +12,7 @@ class QueriesController < ApplicationController
     @language = @query.language
   end
 
+
   def create
     @query = language.queries.new(query_params)
 
