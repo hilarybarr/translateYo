@@ -12,6 +12,10 @@ class QueriesController < ApplicationController
     @language = @query.language
   end
 
+  def new
+    @query = language.queries.new
+  end
+
   def create
     @query = language.queries.new(query_params)
 
@@ -21,6 +25,10 @@ class QueriesController < ApplicationController
       render 'languages/show'
     end
   end
+
+  # def bing_new
+  #   @query = language.queries.new
+  # end
 
   def bing_create
     text_to_translate = params[:query][:english]
