@@ -61,6 +61,8 @@ group :assets do
   gem 'coffee-rails'
 end
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
 	gem 'shoulda-matchers'
   gem 'rspec-rails', '~> 3.0.0'
