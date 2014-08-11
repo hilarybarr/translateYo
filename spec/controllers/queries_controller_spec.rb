@@ -20,7 +20,7 @@ describe QueriesController, :type => :controller do
   context "POST #bing_create" do
   	it "increments the Query count" do
   		expect { 
-				post :create, language_id: language.id, query: { :title => "Test", :english => "hey" } 
+				post :bing_create, language_id: language.id, query: { :title => "Test", :english => "hey" } 
 				}.to change{Query.count}.by(1)
   	end
   end
